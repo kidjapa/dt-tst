@@ -1,0 +1,13 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Docker/Go/Dockerfile
+    environment:
+      PORT: 9090
+    container_name: golang_dt_tst
+    command: sh -c "./dt-tst"
+    ports:
+      - "9090:9090"
+    tty: true

@@ -1,0 +1,111 @@
+basePath: /
+definitions:
+  types.EventCommonResponse:
+    properties:
+      balance:
+        type: number
+      id:
+        type: string
+    type: object
+  types.EventRequest:
+    properties:
+      amount:
+        type: number
+      destination:
+        type: string
+      origin:
+        type: string
+      type:
+        type: string
+    required:
+    - type
+    type: object
+  types.PostEventCommonResponse:
+    properties:
+      destination:
+        $ref: '#/definitions/types.EventCommonResponse'
+      origin:
+        $ref: '#/definitions/types.EventCommonResponse'
+    type: object
+host: localhost:9090
+info:
+  contact: {}
+  description: 'rest-api-balance-event Author: Bruno Luiz Katzjarowski'
+  title: rest-api-balance-event
+  version: "1.0"
+paths:
+  /balance:
+    get:
+      description: Get balance from an account_id
+      parameters:
+      - description: Account id
+        in: query
+        name: account_id
+        required: true
+        type: integer
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: number
+        "404":
+          description: Not Found
+          schema:
+            type: number
+        "500":
+          description: Internal Server Error
+          schema:
+            type: number
+      summary: Get balance from an account_id
+      tags:
+      - balance
+  /event:
+    post:
+      description: PostEvent Post an event
+      parameters:
+      - description: spritesheet with width and height of the expected sprite cut
+        in: body
+        name: event
+        required: true
+        schema:
+          $ref: '#/definitions/types.EventRequest'
+      produces:
+      - application/json
+      responses:
+        "201":
+          description: Created
+          schema:
+            $ref: '#/definitions/types.PostEventCommonResponse'
+        "404":
+          description: Not Found
+          schema:
+            type: number
+      summary: PostEvent Post an event
+      tags:
+      - event
+  /reset:
+    post:
+      description: Just return an OK if the api are on
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            type: string
+        "404":
+          description: Not Found
+          schema:
+            type: number
+      summary: Just return an OK if the api are on
+      tags:
+      - reset
+schemes:
+- http
+- https
+securityDefinitions:
+  BasicAuth:
+    type: basic
+swagger: "2.0"

@@ -1,0 +1,39 @@
+{
+  "agents": [
+    {
+      "account_id": "100",
+      "name": "Fulano Beltrano",
+      "company": "Zinco",
+      "address": "80 Bath Avenue, Elliott, Minnesota",
+      "balance": 0
+    },
+    {
+      "account_id": "3808",
+      "name": "Antoinette Petersen",
+      "company": "Zenco",
+      "address": "80 Bath Avenue, Elliott, Minnesota",
+      "balance": 14563.41
+    },
+    {
+      "account_id": "2695",
+      "name": "Sweeney Anthony",
+      "company": "Viasia",
+      "address": "50 Chester Court, Inkerman, Michigan",
+      "balance": 5752.64
+    },
+    {
+      "account_id": "1648",
+      "name": "Dorothea Acosta",
+      "company": "Eschoir",
+      "address": "1 Lewis Place, Wedgewood, Marshall Islands",
+      "balance": 10120.07
+    },
+    {
+      "account_id": "300",
+      "name": "Dorothea Acosta",
+      "company": "Eschoir",
+      "address": "1 Lewis Place, Wedgewood, Marshall Islands",
+      "balance": 0
+    }
+  ]
+}
