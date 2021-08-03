@@ -87,7 +87,7 @@ paths:
       - event
   /reset:
     post:
-      description: Just return an OK if the api are on
+      description: Reset state before starting tests
       produces:
       - application/json
       responses:
@@ -99,7 +99,7 @@ paths:
           description: Not Found
           schema:
             type: number
-      summary: Just return an OK if the api are on
+      summary: Reset state before starting tests
       tags:
       - reset
 schemes:

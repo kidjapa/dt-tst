@@ -104,14 +104,14 @@ var doc = `{
         },
         "/reset": {
             "post": {
-                "description": "Just return an OK if the api are on",
+                "description": "Reset state before starting tests",
                 "produces": [
                     "application/json"
                 ],
                 "tags": [
                     "reset"
                 ],
-                "summary": "Just return an OK if the api are on",
+                "summary": "Reset state before starting tests",
                 "responses": {
                     "200": {
                         "description": "OK",
