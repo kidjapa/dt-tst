@@ -4,8 +4,6 @@
 Go: 1.16.5
 ```
 
-- Author: Bruno Luiz Katzjarowski
-
 Environment Variables
 ---------------------
 Name | Description | Accept Values | Default |
